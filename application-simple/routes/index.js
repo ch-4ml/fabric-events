@@ -109,6 +109,7 @@ router.post('/asset', async (req, res) => {
   const assetKey = `item-${randomNumber}`;
   try {
     const transaction = contract.createTransaction('CreateAsset');
+    console.log(`--> Submit CreateAsset(${color})`);
     await transaction.submit(assetKey, color);
     res.status(200).send({ msg: `Submit CreateAsset Result: committed, asset ${assetKey}` });
   } catch (createError) {
