@@ -66,13 +66,12 @@ git clone https://github.com/ch-4ml/fabric-events.git
 - 네트워크를 구성하고 체인코드를 배포합니다.
 
 ```
-~/fabric-samples/asset-transfer-events $ ./up.sh
+~/fabric-samples/asset-transfer-events/application-simple $ ./up.sh
 ```
 
 - 애플리케이션을 실행합니다.
 
 ```
-~/fabric-samples/asset-transfer-events $ cd application-simple
 ~/fabric-samples/asset-transfer-events/application-simple $ npm install
 ~/fabric-samples/asset-transfer-events/application-simple $ node app.js
 ```
@@ -86,5 +85,5 @@ git clone https://github.com/ch-4ml/fabric-events.git
 - 지갑을 삭제하는 명령을 포함하고 있습니다.
 
 ```
-~/fabric-samples/asset-transfer-events $ ./down.sh
+~/fabric-samples/asset-transfer-events/application-simple $ ./down.sh
 ```

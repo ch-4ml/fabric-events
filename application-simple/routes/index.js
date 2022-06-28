@@ -113,6 +113,7 @@ router.post('/asset', async (req, res) => {
     await transaction.submit(assetKey, color);
     res.status(200).send({ msg: `Submit CreateAsset Result: committed, asset ${assetKey}` });
   } catch (createError) {
+    console.log(`${RED}<-- Submit Failed(${color})${RESET}`);
     res.status(500).send({ msg: `Submit Failed: CreateAsset - ${createError}` });
   }
 });
