@@ -18,7 +18,7 @@
 
 ### Application
 
-이 애플리케이션에서는 한 가지 유형의 Listener를 사용합니다.
+이 애플리케이션에서는 한 가지 유형의 listener를 사용합니다.
 
 1. Contract Listener: 특정 contract의 (체인코드) 이벤트를 수신합니다.
 
@@ -31,7 +31,7 @@
 애플리케이션은 다음 순서로 동작합니다.
 
 - 체인코드 호출 (콘솔 출력은 다음과 같습니다 `--> Submit CreateAsset([색상])`)
-- 애플리케이션에서 이벤트 수신 완료 (콘솔 출력은 다음과 같습니다. `<-- Contract Event Received: [이벤트명] - [색상]`)
+- 애플리케이션에서 이벤트 수신 (콘솔 출력은 다음과 같습니다. `<-- Contract Event Received: [이벤트명] - [색상]`)
 
 Listener는 이벤트를 <b>비동기</b>적으로 수신합니다. 이벤트는 애플리케이션 코드가 트랜잭션을 전송한 후(또는 변경 사항이 원장에 커밋된 후) 다른 활동 중에 수신될 수 있습니다.
 
@@ -48,19 +48,19 @@ Listener는 이벤트를 <b>비동기</b>적으로 수신합니다. 이벤트는
 
 ## Running the sample
 
-Fabric의 `test-network`를 사용하여 예제를 배포하고 실행합니다. 다음 단계를 순서대로 수행하십시오.
+`fabric-samples`의 `test-network`를 사용하여 예제를 배포하고 실행합니다. 다음 단계를 순서대로 수행하십시오.
 
 - 이 repository의 파일을 모두 clone 또는 download하세요.
 
 ```
-git clone https://github.com/ch-4ml/fabric-events.git
+git clone https://github.com/ch-4ml/fabric-events-web.git
 ```
 
 - Download한 파일을 모두 로컬 환경에 구성된 `fabric-samples/asset-transfer-events/` 디렉토리에 복사하세요.
 - 아래 코드는 `fabric-samples` 디렉토리가 사용자의 `home` 디렉토리 (`/home/[username]`)에 구성되어 있음을 전제합니다.
 
 ```
-.../fabric-events $ cp -r . ~/fabric-samples/asset-transfer-events/
+.../fabric-events-web $ cp -r . ~/fabric-samples/asset-transfer-events/
 ```
 
 - 네트워크를 구성하고 체인코드를 배포합니다.
